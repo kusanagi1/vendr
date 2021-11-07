@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS user;
+DROP TABLE IF EXISTS post;
+DROP TABLE IF EXISTS post_reply;
+
+CREATE TABLE user (
+    id
+)
