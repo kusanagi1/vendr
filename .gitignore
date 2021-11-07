@@ -1,0 +1,5 @@
+venv
+dist
+.\blog\db.py
+.\blog\schema.py
+.\blog\__pycache__
