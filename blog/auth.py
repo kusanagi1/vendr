@@ -5,7 +5,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 
 from blog.db import get_db
 
-bp = Blueprint('access', __name__, url_prefix='/access')
+bp = Blueprint('auth', __name__, url_prefix='/auth')
 
 @bp.before_app_request
 def load_logged_in_user():
@@ -40,11 +40,11 @@ def register():
                 (username, generate_password_hash(password))
             )
             db.commit()
-            return redirect(url_for('access.login'))
+            return redirect(url_for('auth.login'))
 
         flash(error)
 
-    return render_template('access/register.html')
+    return render_template('auth/register.html')
 
 @bp.route('/login', methods=('GET', 'POST'))
 def login():
@@ -69,7 +69,7 @@ def login():
 
         flash(error)
 
-    return render_template('access/login.html')
+    return render_template('auth/login.html')
 
 @bp.route('/logout')
 def logout():
@@ -80,7 +80,7 @@ def login_required(view):
     @functools.wraps(view)
     def wrapped_view(**kwargs):
         if g.user is None:
-            return redirect(url_for('access.login'))
+            return redirect(url_for('auth.login'))
         
         return view(**kwargs)
     
