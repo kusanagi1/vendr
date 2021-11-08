@@ -94,6 +94,9 @@ nav u1 li a, nav u1 li span, header .action {
     margin-bottom: 0.5em;
 }
 .content input, .content textarea {
+    margin-bottom: 1em;
+}
+.content .content textarea  {
     min-height: 12em;
     resize: vertical;
 }
