@@ -36,7 +36,7 @@ Do the following in order to run this code:
    └───requirements.txt
 
 4. Dump the code for the git repo into it or just clone the repo
-   git clone
+   git clone https://github.com/kusanagi1/vendr.git
 5. set the environment variable
    $env:FLASK_APP=".\blog\ (Windows)
    $env:FLASK_ENV="Development" (Windows)
