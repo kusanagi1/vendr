@@ -1,22 +1,28 @@
-{% extends 'base.html' %}
-
-
-{% block header %}
-    <h1>{% block title %}Edit "{{ post['title'] }}" {% endblock title %}</h1>
-{% endblock header %}
-
-{% block content %}
-    <form method="post">
-        <label for="title">Title</label>
-        <input name="title" id="title">
-            value="{{ request.form['title'] or post['title'] }}" required>
-        <label for="body">Body</label>
-        <textarea name="body" id="body">{{ request.form['body'] or post['body'] }}</textarea>
-        <input type="submit" value="Save" id="">
-    </form>
-    <hr>
-    <form action="{{ url_for('blog.delete', id=post['id']) }}" method="post">
-      <input class="danger" type="submit" value="Delete" onclick="return confirm('Are you sure?');">
-    </form>
+{% extends 'base.html' %} {% block header %}
+<h1>{% block title %}Edit "{{ order['item'] }}" {% endblock title %}</h1>
+{% endblock header %} {% block content %}
+<form method="post">
+  <label for="item">Item</label>
+  <textarea name="item" id="item">
+    {{ request.form['item'] or order['item'] }}
+  </textarea>
+  <label for="item_description">Item Description</label>
+  <textarea name="item_description" id="item_description">
+    {{ request.form['item_description'] or order['item_description'] }}
+  </textarea>
+  <label for="quantity">Quantity</label>
+  <textarea name="quantity" id="quantity">
+    {{ request.form['quantity'] or order['quantity'] }}
+  </textarea>
+  <input type="submit" value="Update Order" id="" />
+</form>
+<hr />
+<form action="{{ url_for('blog.delete', id=order['id']) }}" method="post">
+  <input
+    class="danger"
+    type="submit"
+    value="Delete"
+    onclick="return confirm('Are you sure?');"
+  />
+</form>
 {% endblock content %}
-    

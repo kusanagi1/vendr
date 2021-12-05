@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<title>{% block title %} {% endblock title %} - Blog</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<title>{% block title %} - BPlan {% endblock title %}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 <nav>
-    <h1>Abie's Blog</h1>
-    {% if g.user %}
-        <li><span>{{ g.user['username'] }} | </span>  
-            <a href="{{ url_for('auth.logout') }}"> Log Out </a>
-        </li>
-    {% else %}
-        <a href="{{ url_for('auth.register') }}">Register | </a> 
-        <a href="{{ url_for('auth.login') }}"> Log In </a>
-    {% endif %}
+  <h1>Business Plan</h1>
+  {% if g.user %}
+  <li>
+    <span>{{ g.user['username'] }} | </span>
+    <a href="{{ url_for('auth.logout') }}"> Log Out </a>
+  </li>
+  {% else %}
+  <a href="{{ url_for('auth.register') }}">Register | </a>
+  <a href="{{ url_for('auth.login') }}"> Log In</a>
+  {% endif %}
 </nav>
 <section class="content">
-    <header>
-        {% block header %} {% endblock header %}
-    </header>
-    {% for message in get_flashed_messages() %}
-        <div class="flash">{{ message }}</div>
-    {% endfor %}
-    {% block content %} {% endblock content %}
+  <header>{% block header %} {% endblock header %}</header>
+  {% if g.user %} {% for message in get_flashed_messages() %}
+  <div class="flash">{{ message }}</div>
+  {% endfor %} {% else %}
+  <img src="{{ '../static/vendingmachine.png' }}" alt="no image" />
+  {% endif %}
 </section>
+<section class="content">{% block content %}{% endblock %}</section>
