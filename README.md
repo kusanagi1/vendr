@@ -37,13 +37,8 @@ Do the following in order to run this code:
 4. Dump the code for the git repo into it or just clone the repo
    git clone
 5. set the environment variable
-
-# $env:FLASK_APP=".\blog\ (Windows)
-
-# $env:FLASK_ENV="Development" (Windows)
-
-# export FLASK_APP=".\blog\ (Linux)
-
-# export FLASK_ENV="Development" (Linux)
-
-# flask run
+   # $env:FLASK_APP=".\blog\ (Windows)
+   # $env:FLASK_ENV="Development" (Windows)
+   # export FLASK_APP=".\blog\ (Linux)
+   # export FLASK_ENV="Development" (Linux)
+   # flask run
