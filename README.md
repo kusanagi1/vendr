@@ -12,38 +12,34 @@ Do the following in order to run this code:
 3. Create the directory tree as shown below. The instance folder will be
    created see below
 
-├───.venv
-├───blog
-│ ├───static
-| | └───style.css
-| | └───vendingmachine.png
-│ └───templates
-│ | └───auth
-| | | └───login.html
-| | | └───register.html
-│ | └───blog
-| | | └───create.html
-| | | └───index.html
-| | | └───update.html
-| | └───base.html
-| └─── --init--.py
-| └─── auth.py
-| └─── blog.py
-| └─── db.py
-| └─── schema.sql
-├───instance
-└───tests
+   ├───.venv
+   ├───blog
+   │ ├───static
+   | | └───style.css
+   | | └───vendingmachine.png
+   │ └───templates
+   │ | └───auth
+   | | | └───login.html
+   | | | └───register.html
+   │ | └───blog
+   | | | └───create.html
+   | | | └───index.html
+   | | | └───update.html
+   | | └───base.html
+   | └─── --init--.py
+   | └─── auth.py
+   | └─── blog.py
+   | └─── db.py
+   | └─── schema.sql
+   ├───instance
+   └───tests
+   └───requirements.txt
 
 4. Dump the code for the git repo into it or just clone the repo
    git clone
 5. set the environment variable
-
-# $env:FLASK_APP=".\blog\ (Windows)
-
-# $env:FLASK_ENV="Development" (Windows)
-
-# export FLASK_APP=".\blog\ (Linux)
-
-# export FLASK_ENV="Development" (Linux)
-
-# flask run
+   $env:FLASK_APP=".\blog\ (Windows)
+   $env:FLASK_ENV="Development" (Windows)
+   $ export FLASK_APP=".\blog\ (Linux)
+   $ export FLASK_ENV="Development" (Linux)
+   $ flask run
