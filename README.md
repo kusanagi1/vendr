@@ -1,4 +1,4 @@
-This is my first web blog
+This project is based on flask project which can be found on https://pocoo.palletsproject.com/
 Do the following in order to run this code:
 
 1. Create a top level folder "foldername"
