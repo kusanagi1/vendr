@@ -11,7 +11,6 @@ Do the following in order to run this code:
 
 3. Create the directory tree as shown below. The instance folder will be
    created see below
-
    ├───.venv
    ├───blog
    │ ├───static
