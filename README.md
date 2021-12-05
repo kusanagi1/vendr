@@ -1,4 +1,3 @@
-This is my first web blog
 Do the following in order to run this code:
 
 1. Create a top level folder "foldername"
