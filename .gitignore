@@ -1,5 +1,6 @@
 .venv
 .vscode
+.pre-commit-config.yaml
 .\blog\__pycache__
 instance
 Pipfile
