@@ -9,6 +9,8 @@ Do the following in order to run this code:
    $ .venv\Scripts\activate (Windows)
    $ .venv/bin/activate (Linux)
 
+`bash tree`
+
 3. Create the directory tree as shown below. The instance folder will be
    created see below
    ├───.venv
